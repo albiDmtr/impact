@@ -11,7 +11,7 @@ import {SimpleMeshLayer} from '@deck.gl/mesh-layers';
 import {SphereGeometry} from '@luma.gl/engine';
 import viewStates from './viewStates.js';
 
-const radius = 2;
+const radius = 3;
 
 const Visualization = () => {
 
@@ -29,7 +29,7 @@ const Visualization = () => {
     }),
     new GeoJsonLayer({
       id: 'earth-land',
-      data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_land.geojson',
+      data: 'https://raw.githubusercontent.com/albiDmtr/impact/refs/heads/main/geojson/earth.geo.json',
       // Styles
       stroked: false,
       filled: true,
