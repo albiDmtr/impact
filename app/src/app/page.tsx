@@ -9,26 +9,17 @@ const Home = () => {
     left: 0,
     width: '100vw',
     height: '100vh',
-    boxShadow: 'inset 0px 0px 30vw 10vw rgb(0,0,0)'
+    boxShadow: 'inset 0px 0px 30vw 10vw rgb(0,0,0)',
+    pointerEvents: 'none'
   } as React.CSSProperties;
 
   const screenStyle = {
     width: '100vw',
     height: '100vh',
+    backgroundColor: 'black',
+    backgroundImage: 'radial-gradient(circle, rgba(255,255,255,1) 90%, rgba(0,0,0,0) 98%)',
     overflow: 'hidden'
   }
-
-  useEffect(() => {
-    // Set overflow hidden on mount
-    document.body.style.overflow = 'hidden';
-    document.documentElement.style.overflow = 'hidden';
-
-    // Clean up on unmount
-    return () => {
-      document.body.style.overflow = '';
-      document.documentElement.style.overflow = '';
-    };
-  }, []);
 
   return (
     <div style={screenStyle}>
