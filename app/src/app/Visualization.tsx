@@ -11,12 +11,12 @@ import {SimpleMeshLayer} from '@deck.gl/mesh-layers';
 import {SphereGeometry} from '@luma.gl/engine';
 import viewStates from './viewStates.js';
 
-const radius = 3;
+const radius = 1000;
 
 const Visualization = () => {
 
   // get data
-  const DATA_URL = 'https://raw.githubusercontent.com/albiDmtr/impact/refs/heads/main/data/testForRes.json';
+  const DATA_URL = 'https://raw.githubusercontent.com/albiDmtr/impact/refs/heads/main/data/Belgium_forest_loss.json';
   type DataPoint = [longitude: number, latitude: number, count: number];
   const layers = [
     new SimpleMeshLayer({
@@ -29,12 +29,22 @@ const Visualization = () => {
     }),
     new GeoJsonLayer({
       id: 'earth-land',
-      data: 'https://raw.githubusercontent.com/albiDmtr/impact/refs/heads/main/geojson/earth.geo.json',
-      // Styles
+      data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_land.geojson',
       stroked: false,
       filled: true,
+      extruded: true,
+      getElevation: -26000,
+      opacity: 0.01,
+      getFillColor: [255, 255, 255]
+    }),
+    new GeoJsonLayer({
+      id: 'earth-borders',
+      data: 'https://raw.githubusercontent.com/georgique/world-geojson/refs/heads/develop/countries/brazil.json',
+      stroked: false,
+      filled: true,
+      radiusMinPixels: 100,
       opacity: 0.1,
-      getFillColor: [120, 120, 120]
+      getFillColor: [255, 255, 255]
     }),
     new ScatterplotLayer<DataPoint>({
       id: 'scatter-plot',
@@ -47,6 +57,16 @@ const Visualization = () => {
       updateTriggers: {
         getFillColor: [[255, 0, 0], [0, 0, 255], [0, 255, 0]]
       }
+    }),
+    new SimpleMeshLayer({
+      id: 'earth-sphere',
+      data: [0],
+      mesh: new SphereGeometry({radius: 6.3e6, nlat: 36, nlong: 72}),
+      coordinateSystem: COORDINATE_SYSTEM.CARTESIAN,
+      getPosition: [0, 0, 0],
+      getColor: [0, 34, 34],
+      texture: 'https://raw.githubusercontent.com/albiDmtr/impact/refs/heads/main/data/earth.jpg',
+      sizeScale: 10
     })
   ];
 

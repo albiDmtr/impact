@@ -17,7 +17,6 @@ const Home = () => {
     width: '100vw',
     height: '100vh',
     backgroundColor: 'black',
-    backgroundImage: 'radial-gradient(circle, rgba(255,255,255,1) 90%, rgba(0,0,0,0) 98%)',
     overflow: 'hidden'
   }
 
