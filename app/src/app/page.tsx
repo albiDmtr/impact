@@ -1,11 +1,14 @@
 'use client';
 import FrontPageEarth from './FrontPageEarth';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Select } from '@mui/base/Select';
 import { Option } from '@mui/base/Option';
 import Logo from './Logo';
+import { useRouter } from 'next/router';
 
 const Home = () => {
+    const [selectedTopic, setSelectedTopic] = useState("deforestation");
+    const [selectedCountry, setSelectedCountry] = useState("tz");
     // 0 - 100
     const filterStyle = {
       position: 'fixed',
@@ -23,6 +26,10 @@ const Home = () => {
       backgroundColor: 'black',
       overflow: 'hidden'
     }
+
+  const handleButtonClick = () => {
+    window.location.href = `/${selectedTopic}/${selectedCountry}`;;
+  };
 
   return (
     <div style={screenStyle}>
@@ -45,7 +52,16 @@ const Home = () => {
           <Option value="deforestation">deforestation</Option>
         </Select>
           in 
-        <Select defaultValue="tz" id="country" name="country">
+        <Select 
+          value={selectedCountry}
+          onChange={(event, value) => {
+            if (value !== null) {
+              setSelectedCountry(value);
+            }
+          }} 
+          id="country" 
+          name="country"
+        >
           <Option value="tz">Tanzania</Option>
           <Option value="fi">Finland</Option>
           <Option value="se">Sweden</Option>
@@ -73,7 +89,9 @@ const Home = () => {
         backgroundColor: 'rgba(255,255,255,0.9)',
         fontWeight: '550',
         color: 'black'
-      }}>
+      }}
+      onClick={handleButtonClick}
+      >
         {'Find out >'}
       </button>
       <Logo />
