@@ -1,15 +1,17 @@
 'use client';
-import Visualization from '../Visualization';
+import Visualization from '../../Visualization';
 import React, { useEffect } from 'react';
-import Timeline from '../Timeline';
-import Logo from '../Logo';
+import Timeline from '../../Timeline';
+import Logo from '../../Logo';
 import { createClient } from '@supabase/supabase-js';
-import CountryText from '../CountryText';
-import CtaLayover from '../CtaLayover';
+import CountryText from '../../CountryText';
+import CtaLayover from '../../CtaLayover';
+import { useParams } from 'next/navigation';
 
 const Home = () => {
     // 0 - 100
-    const [country, setCountry] = React.useState<string>('fr');
+    const params = useParams<{ country: string; }>();
+    const { country } = (params || { country: 'de' }) as {country: string};
     const [years, setYears] = React.useState<number[]>([2000, 2004]);
     const [countriesData, setCountriesData] = React.useState<any[]>([]);
 
@@ -70,6 +72,17 @@ const Home = () => {
       <CountryText
         data={countriesData.find((data: any) => data['country_code' as keyof typeof data] === country.toUpperCase())}
       />
+      <a href="/" className="btn" style={{
+        position: 'fixed',
+        top: '36px',
+        right: '36px',
+        background: 'rgba(255, 255, 255, 0.9)',
+        color: 'black',
+        fontWeight: '550',
+        margin: 0
+      }}>
+        {'< Go Back'}
+      </a>
       <Logo />
     </div>
   );
