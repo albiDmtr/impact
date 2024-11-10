@@ -43,6 +43,8 @@
   font-family: 'Roboto Mono', monospace;
   max-height: 240px;
   overflow-y: scroll;
+  z-index: 100000000000;
+  margin-top: 8px;
 }
 
 .base-Select-root.base--expanded::after {
