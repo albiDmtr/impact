@@ -45,11 +45,23 @@ const Home = () => {
           <Option value="deforestation">deforestation</Option>
         </Select>
           in 
-        <Select defaultValue="Tanzania" id="country" name="country">
-          <Option value="Tanzania">Tanzania</Option>
-          <Option value="Brazil">Brazil</Option>
-          <Option value="Indonesia">Indonesia</Option>
-          <Option value="Germany">Germany</Option>
+        <Select defaultValue="tz" id="country" name="country">
+          <Option value="tz">Tanzania</Option>
+          <Option value="fi">Finland</Option>
+          <Option value="se">Sweden</Option>
+          <Option value="fr">France</Option>
+          <Option value="dk">Denmark</Option>
+          <Option value="ua">Ukraine</Option>
+          <Option value="nl">The Netherlands</Option>
+          <Option value="pg">Papua New Guinea</Option>
+          <Option value="de">Germany</Option>
+          <Option value="pt">Portugal</Option>
+          <Option value="it">Italy</Option>
+          <Option value="pl">Poland</Option>
+          <Option value="cz">Czechia</Option>
+          <Option value="hu">Hungary</Option>
+          <Option value="gr">Greece</Option>
+          <Option value="es">Estonia</Option>
         </Select>
           ?</h1>
       </div>
