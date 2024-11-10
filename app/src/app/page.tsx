@@ -7,7 +7,7 @@ import Logo from './Logo';
 
 const Home = () => {
     const [selectedTopic, setSelectedTopic] = useState("deforestation");
-    const [selectedCountry, setSelectedCountry] = useState("tz");
+    const [selectedCountry, setSelectedCountry] = useState("br");
     // 0 - 100
     const filterStyle = {
       position: 'fixed',
@@ -50,6 +50,7 @@ const Home = () => {
           id="country" 
           name="country"
         >
+          <Option value="br">Brazil</Option>
           <Option value="tz">Tanzania</Option>
           <Option value="fi">Finland</Option>
           <Option value="se">Sweden</Option>
