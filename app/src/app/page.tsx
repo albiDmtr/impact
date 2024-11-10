@@ -33,7 +33,7 @@ const Home = () => {
     <div style={screenStyle}>
       <Visualization
         years={years}
-        country='de'
+        country='fr'
       />
       <div style={filterStyle}></div>
       <Timeline
