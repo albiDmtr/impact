@@ -1,10 +1,9 @@
 'use client';
 import FrontPageEarth from './FrontPageEarth';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Select } from '@mui/base/Select';
 import { Option } from '@mui/base/Option';
 import Logo from './Logo';
-import { useRouter } from 'next/router';
 
 const Home = () => {
     const [selectedTopic, setSelectedTopic] = useState("deforestation");

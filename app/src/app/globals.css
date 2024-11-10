@@ -17,6 +17,8 @@
   padding: 16px;
   border: solid 2px rgba(255, 255, 255, 0.9);
   font-family: 'Roboto Mono', monospace;
+  max-height: 240px;
+  overflow-y: scroll;
 }
 
 .base-Select-root.base--expanded::after {
@@ -148,4 +150,23 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.9); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white; 
 }
