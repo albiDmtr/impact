@@ -1,25 +1,22 @@
-import React, { useState} from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import exampleData from './exampleData.json';
 import TimelinePoint from './TimelinePoint';
 
 interface Props {
     value: number[];
+    data?: any;
     handleChange: (event: Event, newValue: number | number[]) => void;
 }
 
-const Timeline = ({value, handleChange}: Props) => {
-    const data = exampleData['data' as keyof typeof exampleData];
-    const changes: any[] = data['legislative_changes' as keyof typeof data];
-    const changeYears: number[] = changes.map(change => change['year' as keyof typeof change]);
-
-    const avg = (value[0] + value[1])/ 2;
-    const closestChangeIndex = changeYears.reduce((closestIndex, currentYear, currentIndex) => {
-        return Math.abs(currentYear - avg) < Math.abs(changeYears[closestIndex] - avg) ? currentIndex : closestIndex;
-    }, 0);
-
+const Timeline = ({value, handleChange, data}: Props) => {
+    const innerData = data ? data['data' as keyof typeof data]['data' as keyof typeof data.data] : null;
+    const changes: any[] = innerData ? (innerData['legislative_changes' as keyof typeof innerData] || []) : [];
+    const changeYears = changes.map(change => change['year' as keyof typeof change]);
+    const layoversDisabled = changeYears.includes(value[1]);
+    
     return (
+        data &&
         <Box sx={{
                 width: '80vw',
                 maxWidth: '800px',
@@ -34,7 +31,11 @@ const Timeline = ({value, handleChange}: Props) => {
                 marginBottom: '16px',
                 position: 'relative'
             }}>
-                {changes.filter(change => change['dimension'] === 'deforestation').map((change, index) => {
+                {changes.filter(change => (change['dimension'] === 'deforestation' && 
+                    change['year' as keyof typeof change] >= 2000 && 
+                    change['year' as keyof typeof change] <= 2023
+                ))
+                    .map((change, index) => {
                     return (
                         <TimelinePoint
                             key={index}
@@ -43,7 +44,8 @@ const Timeline = ({value, handleChange}: Props) => {
                             data={change['data' as keyof typeof change] || '' }
                             dimension={change['dimension' as keyof typeof change] || '' }
                             link={change['link' as keyof typeof change] || '' }
-                            isOpen={index === closestChangeIndex ? true : false}
+                            enabled={!layoversDisabled}
+                            isOpen={change['year' as keyof typeof change] === value[1] ? true : false}
                         />
                     );
                 })}
