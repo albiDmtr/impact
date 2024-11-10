@@ -30,7 +30,7 @@ const Home = () => {
       <div style={filterStyle}></div>
       <div style={{
         position: 'fixed',
-        top: '36vh',
+        top: '32vh',
         left: '10vw',
         color: 'white',
         textAlign: 'left',
@@ -53,6 +53,17 @@ const Home = () => {
         </Select>
           ?</h1>
       </div>
+      <button className='btn' style={{
+        position: 'fixed',
+        top: '62vh',
+        right: '10vw',
+        fontSize: '22px',
+        backgroundColor: 'rgba(255,255,255,0.9)',
+        fontWeight: '550',
+        color: 'black'
+      }}>
+        {'Find out >'}
+      </button>
       <Logo />
     </div>
   );
