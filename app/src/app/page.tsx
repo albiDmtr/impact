@@ -34,16 +34,9 @@ const Home = () => {
     <div style={screenStyle}>
       <FrontPageEarth />
       <div style={filterStyle}></div>
-      <div style={{
-        position: 'fixed',
-        top: '32vh',
-        left: '10vw',
-        color: 'white',
-        textAlign: 'left',
-        zIndex: 100,
-      }}>
-        <h1 className="title">How do political decisions affect<br />
-        <Select defaultValue="deforestation" id="named-select" name="named-select">
+      <div className="front-cont">
+        <h1 className="frontpage-title">How do political decisions affect<br />
+        <span className="after-select"><Select defaultValue="deforestation" id="named-select" name="named-select">
           <Option value="deforestation">deforestation</Option>
         </Select>
           in 
@@ -74,17 +67,9 @@ const Home = () => {
           <Option value="gr">Greece</Option>
           <Option value="es">Estonia</Option>
         </Select>
-          ?</h1>
+          ?</span></h1>
       </div>
-      <button className='btn' style={{
-        position: 'fixed',
-        top: '62vh',
-        right: '10vw',
-        fontSize: '22px',
-        backgroundColor: 'rgba(255,255,255,0.9)',
-        fontWeight: '550',
-        color: 'black'
-      }}
+      <button className='btn front-cta'
       onClick={handleButtonClick}
       >
         {'Find out >'}

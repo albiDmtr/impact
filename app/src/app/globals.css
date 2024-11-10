@@ -1,3 +1,27 @@
+.front-cta {
+  position: fixed;
+  top: 62vh;
+  right: 10vw;
+  font-size: 22px;
+  background-color: rgba(255,255,255,0.9);
+  font-weight: 550;
+  color: black;
+}
+
+.frontpage-title {
+  font-size: 48px !important;
+  line-height: 1.6;
+}
+
+.front-cont {
+  position: fixed;
+  top: 30vh;
+  left: 10vw;
+  color: white;
+  text-align: left;
+  z-index: 100;
+}
+
 .base-Popup-root ul li:hover {
   background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -169,4 +193,29 @@ a {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: white; 
+}
+
+@media screen and (max-width: 950px) {
+  .frontpage-title {
+    font-size: 36px !important;
+    line-height: 1.2;
+  }
+  .after-select {
+    line-height: 1.8;
+  }
+  .base-Select-root {
+    font-size: 36px;
+    border: solid 4px rgba(255, 255, 255, 0.9);
+    padding: 4px 45px 6px 16px;
+    margin: 0 6px;
+  }
+
+  .front-cont {
+    top: 24vh;
+  }
+
+  .front-cta {
+    top: 70vh;
+    font-size: 24px;
+  }
 }
