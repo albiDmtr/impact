@@ -43,11 +43,7 @@ const Home = () => {
         textAlign: 'left',
         zIndex: 100,
       }}>
-        <h1 style={{
-          fontSize: '56px',
-          fontWeight: '550',
-          lineHeight: '1.4',
-        }}>How do political decisions affect<br />
+        <h1 className="title">How do political decisions affect<br />
         <Select defaultValue="deforestation" id="named-select" name="named-select">
           <Option value="deforestation">deforestation</Option>
         </Select>

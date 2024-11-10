@@ -126,6 +126,18 @@ a.secondary {
   }
 }
 
+.title { 
+  font-size: 56px !important;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
 @media (max-width: 600px) {
   .page {
     padding: 32px;
