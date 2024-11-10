@@ -1,3 +1,38 @@
+.timeline-point {
+  transition: .2s;
+}
+.timeline-point:hover {
+  transform: scale(1.2) rotate(45deg) !important;
+  opacity: 1;
+}
+
+.logo-text {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.mono {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.MuiSlider-valueLabel {
+  background-color: black;
+  border: solid 2px white;
+}
+.MuiSlider-valueLabel::before {
+  display: none;
+}
+
+.MuiSlider-markLabel, .MuiSlider-thumb, .MuiSlider-track, .MuiSlider-mark, .MuiSlider-valueLabel {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+.hover-opacity-08 {
+  transition: background-color 0.2s;
+}
+.hover-opacity-08:hover {
+  background-color: 'rgba(255, 255, 255, 0.8)';
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,7 +54,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

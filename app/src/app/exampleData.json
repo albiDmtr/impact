@@ -1,0 +1,139 @@
+{
+"basic_facts": {
+"country": "Finland",
+"governmental_model": "Parliamentary republic",
+"election_term": "4 years",
+"population": "5.5 million",
+"area": "338,424 km²",
+"land_area_covered_by_forest": "233,000 km²"
+},
+"data": {
+"head_of_state_1_changes": [
+{"Change": "prime minister", "year": 2000, "data": "Paavo Lipponen"},
+{"Change": "prime minister", "year": 2003, "data": "Anneli Jäätteenmäki"},
+{"Change": "prime minister", "year": 2003, "data": "Matti Vanhanen"},
+{"Change": "prime minister", "year": 2010, "data": "Mari Kiviniemi"},
+{"Change": "prime minister", "year": 2011, "data": "Jyrki Katainen"},
+{"Change": "prime minister", "year": 2014, "data": "Alexander Stubb"},
+{"Change": "prime minister", "year": 2015, "data": "Juha Sipilä"},
+{"Change": "prime minister", "year": 2019, "data": "Antti Rinne"},
+{"Change": "prime minister", "year": 2019, "data": "Sanna Marin"},
+{"Change": "prime minister", "year": 2023, "data": "Petteri Orpo"}
+],
+"legislative_changes": [
+{
+"Heading": "Forest Act",
+"year": 2014,
+"data": "The Act regulates sustainable forestry and biodiversity preservation, implemented after environmental consultations and amendments to previous laws.",
+"dimension": "deforestation",
+"link": "https://en.wikipedia.org/wiki/Forest_Act_(Finland)"
+},
+{
+"Heading": "National Forest Strategy 2025",
+"year": 2015,
+"data": "This strategy promotes sustainable forest management, developed in coordination with forestry stakeholders.",
+"dimension": "deforestation",
+"link": "https://en.wikipedia.org/wiki/National_Forest_Strategy_(Finland)"
+},
+{
+"Heading": "Climate Program for the Land Use Sector",
+"year": 2019,
+"data": "The program targets carbon sequestration in forests to meet emissions goals, supported by both government and forestry sectors.",
+"dimension": "deforestation",
+"link": "https://en.wikipedia.org/wiki/Climate_Program_for_the_Land_Use_Sector_(Finland)"
+},
+{
+"Heading": "Biodiversity Strategy and Action Plan",
+"year": 2022,
+"data": "Focused on conserving forest biodiversity, the plan was endorsed by the Ministry of the Environment following stakeholder consultations.",
+"dimension": "deforestation",
+"link": "https://en.wikipedia.org/wiki/Biodiversity_Strategy_and_Action_Plan_(Finland)"
+},
+{
+"Heading": "Water Services Act",
+"year": 2001,
+"data": "Regulating water utilities to improve water quality, the Act was developed in compliance with EU water standards.",
+"dimension": "hydrology",
+"link": "https://en.wikipedia.org/wiki/Water_Services_Act_(Finland)"
+},
+{
+"Heading": "National Program for the Protection of the Baltic Sea",
+"year": 2002,
+"data": "This program aims to reduce pollution in the Baltic Sea, developed in cooperation with neighboring countries.",
+"dimension": "hydrology",
+"link": "https://en.wikipedia.org/wiki/National_Program_for_the_Protection_of_the_Baltic_Sea_(Finland)"
+},
+{
+"Heading": "River Basin Management Plan",
+"year": 2015,
+"data": "The plan manages water resources across river basins to reduce pollution, aligned with EU Water Framework Directive.",
+"dimension": "hydrology",
+"link":
+"https://en.wikipedia.org/wiki/River_Basin_Management_Plan_(Finland)"
+},
+{
+"Heading": "Flood Risk Management Act",
+"year": 2018,
+"data": "Addressing flood risks through improved waterway management, the act was passed with input from environmental experts.",
+"dimension": "hydrology",
+"link": "https://en.wikipedia.org/wiki/Flood_Risk_Management_Act_(Finland)"
+},
+{
+"Heading": "Environmental Protection Act",
+"year": 2000,
+"data": "This act sets emission limits for industries to minimize pollution, passed through Parliament in alignment with EU directives.",
+"dimension": "industrial pollution",
+"link": "https://en.wikipedia.org/wiki/Environmental_Protection_Act_(Finland)"
+},
+{
+"Heading": "Air Quality Protection Plan",
+"year": 2013,
+"data": "The plan outlines measures for reducing industrial emissions, developed through the Ministry of the Environment.",
+"dimension": "industrial pollution",
+"link": "https://en.wikipedia.org/wiki/Air_Quality_Protection_Plan_(Finland)"
+},
+{
+"Heading": "Circular Economy Roadmap",
+"year": 2016,
+"data": "A strategy promoting recycling and waste reduction to limit industrial pollution, supported by cross-party parliamentary approval.",
+"dimension": "industrial pollution",
+"link": "https://en.wikipedia.org/wiki/Circular_Economy_Roadmap_(Finland)"
+},
+{
+"Heading": "Climate Neutrality Act",
+"year": 2019,
+"data": "The Act sets ambitious targets for carbon neutrality by 2035, with provisions for reducing industrial emissions.",
+"dimension": "industrial pollution",
+"link": "https://en.wikipedia.org/wiki/Climate_Neutrality_Act_(Finland)"
+},
+{
+"Heading": "Soil Protection Act",
+"year": 2004,
+"data": "The act regulates soil contamination and mandates rehabilitation of degraded land, developed in line with EU environmental policies.",
+"dimension": "soil quality",
+"link": "https://en.wikipedia.org/wiki/Soil_Protection_Act_(Finland)"
+},
+{
+"Heading": "Agri-Environmental Program",
+"year": 2007,
+"data": "This program encourages sustainable farming practices to protect soil health, funded by the Ministry of Agriculture.",
+"dimension": "soil quality",
+"link": "https://en.wikipedia.org/wiki/Agri-Environmental_Program_(Finland)"
+},
+{
+"Heading": "National Soil Strategy",
+"year": 2015,
+"data": "The strategy aims to enhance soil carbon sequestration and improve soil health, backed by government support and research institutions.",
+"dimension": "soil quality",
+"link": "https://en.wikipedia.org/wiki/National_Soil_Strategy_(Finland)"
+},
+{
+"Heading": "Sustainable Land Management Initiative",
+"year": 2021,
+"data": "An initiative to rehabilitate soils and improve agricultural practices, led by the Ministry of the Environment.",
+"dimension": "soil quality",
+"link": "https://en.wikipedia.org/wiki/Sustainable_Land_Management_Initiative_(Finland)"
+}
+]
+}
+}

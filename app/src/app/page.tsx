@@ -1,8 +1,17 @@
 'use client';
 import Visualization from './Visualization';
 import React, { useEffect } from 'react';
+import Timeline from './Timeline';
+import Logo from './Logo';
 
 const Home = () => {
+    // 0 - 100
+    const [years, setYears] = React.useState<number[]>([2000, 2004]);
+
+    const handleChange = (event: Event, newValue: number | number[]) => {
+      setYears(newValue as number[]);
+    };
+
   const filterStyle = {
     position: 'fixed',
     top: 0,
@@ -22,8 +31,16 @@ const Home = () => {
 
   return (
     <div style={screenStyle}>
-      <Visualization />
+      <Visualization
+        years={years}
+        country='de'
+      />
       <div style={filterStyle}></div>
+      <Timeline
+        value={years}
+        handleChange={handleChange}
+      />
+      <Logo />
     </div>
   );
 }

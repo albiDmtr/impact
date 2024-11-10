@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@deck.gl/react": "^9.0.35",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.6",
     "deck.gl": "^9.0.35",
     "dotenv": "^16.4.5",
     "mapbox-gl": "^3.7.0",
