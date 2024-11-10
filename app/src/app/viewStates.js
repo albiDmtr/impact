@@ -93,9 +93,9 @@ const viewStates = {
 }
 
 const defaultCoords = {
-    latitude: -10.727900853154123,
-    longitude: -52.48799815779519,
-    zoom: 2
+    latitude: 27.169472570503352,
+    longitude: 54.01715222519852,
+    zoom: 1
 }
 
 export { viewStates, defaultCoords };

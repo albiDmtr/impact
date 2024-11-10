@@ -1,11 +1,14 @@
 'use client';
 import FrontPageEarth from './FrontPageEarth';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Select } from '@mui/base/Select';
 import { Option } from '@mui/base/Option';
 import Logo from './Logo';
 
 const Home = () => {
+  const [country, setCountry] = React.useState('de');
+
+
     // 0 - 100
     const filterStyle = {
       position: 'fixed',
@@ -46,10 +49,9 @@ const Home = () => {
         </Select>
           in 
         <Select defaultValue="Tanzania" id="country" name="country">
-          <Option value="Tanzania">Tanzania</Option>
-          <Option value="Brazil">Brazil</Option>
-          <Option value="Indonesia">Indonesia</Option>
-          <Option value="Germany">Germany</Option>
+          <Option value="tz">Tanzania</Option>
+          <Option value="br">Brazil</Option>
+          <Option value="de">Germany</Option>
         </Select>
           ?</h1>
       </div>

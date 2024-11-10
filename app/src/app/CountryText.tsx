@@ -8,6 +8,7 @@ const CountryText = ({ data }: Props) => {
     const facts = data ? data['data' as keyof typeof data]['basic_facts' as keyof typeof data.data] : {};
 
     return (
+        Object.keys(facts).length !== 0 ?
         <div style={{
             position: 'fixed',
             top: '130px',
@@ -28,7 +29,7 @@ const CountryText = ({ data }: Props) => {
             <p className="inter">{`${facts ? facts['governmental_model' as keyof typeof facts] : ''}, ${facts ? facts['election_term' as keyof typeof facts] : ''} election term`}</p>
             <p className="inter">{facts ? facts['population' as keyof typeof facts] : ''}</p>
             <p className="inter">{facts ? facts['area' as keyof typeof facts] : ''}</p>
-        </div>
+        </div> : <></>
     );
 }
 
