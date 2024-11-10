@@ -80,9 +80,14 @@ const viewStates = {
         zoom: 4.3
     },
     pg: {
-        latitude: -10.727900853154123,
+        latitude: -15,
         longitude: -52.48799815779519,
         zoom: 2
+    },
+    tz: {
+        latitude: -6,
+        longitude: 35,
+        zoom: 3
     }
 
 }

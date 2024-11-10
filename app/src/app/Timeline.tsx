@@ -21,7 +21,7 @@ const Timeline = ({value, handleChange, data}: Props) => {
                 width: '80vw',
                 maxWidth: '800px',
                 position: 'fixed',
-                bottom: '14vh',
+                bottom: '10vh',
                 left: '50%',
                 transform: 'translateX(-50%)'
             }}>
